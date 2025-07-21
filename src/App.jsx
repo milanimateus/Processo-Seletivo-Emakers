@@ -1,9 +1,10 @@
 import './App.css'
+import Registro from './componentes/registro/Registro.jsx'
 
 function App() {
 
   return (
-    <p>F</p>
+    <Registro/>
   )
 }
 
