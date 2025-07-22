@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import imagemForm from '../../images/imagemForm.png'
 import "./Registro.css"
+import Login from '../login/Login';
 
 const Registro = () => {
     const[userData, setUserData] = useState({
@@ -16,7 +18,8 @@ const Registro = () => {
         event.preventDefault();
         alert("Enviando os dados: " + userData.username + " - " + userData.password);
     }
-
+    
+    const nav = useNavigate();
     const handleChange = (e) => {
         const { name, value } = e.target
         setUserData({ ...userData, [name]: value })
@@ -53,7 +56,9 @@ const Registro = () => {
                 </button>
             </div>
             <div className="botao-login">
-                <button className='botao-login'>Fazer Login</button>
+                <button className='botao-login' onClick={() => {
+                    nav("/login")
+                }}>Fazer Login</button>
             </div>
         </div>
         <div className='imagem'>

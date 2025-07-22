@@ -67,6 +67,5 @@ form .input-block input{
 
 .botao-login:hover {
   color: #4B626C;
-  transform: scale(1.05); 
   cursor: pointer;
 }
