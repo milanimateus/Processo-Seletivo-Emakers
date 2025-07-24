@@ -12,7 +12,9 @@ const Registro = () => {
     password: "",
     confirmPassword: "",
   });
+
   const [errors, setErrors] = useState({});
+  
   const nav = useNavigate();
 
   const validate = (data) => {
