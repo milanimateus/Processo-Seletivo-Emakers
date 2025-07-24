@@ -1,8 +1,8 @@
-import React, { useState } from "react"; // CORREÇÃO: useState importado
+import React, { useState } from "react"; 
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // ADICIONADO: Importação do ícone
-import imagemForm from "../../images/imagemForm.png"; // ADICIONADO: Importação da imagem (ajuste o caminho se necessário)
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; 
+import imagemForm from "../../images/imagemForm.png"; 
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -19,7 +19,6 @@ const Login = () => {
     setLoginData({ ...loginData, [name]: value });
   };
 
-  // CORREÇÃO: Adicionado o parâmetro 'event'
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
