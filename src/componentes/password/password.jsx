@@ -41,7 +41,7 @@ const Password = () => {
     <div className="container">
       <div className="container-form">
         <form onSubmit={handleRecover} className="form-login">
-          <div className="title-password">Recuperar Conta</div>
+          <div className="title-recover">Recuperar <br />Conta</div>
           <div className="inputs">
             <div className="input-block">
               <input
@@ -66,8 +66,8 @@ const Password = () => {
             Criar Conta
           </button>
         </div>
-        <div className="botao-senha">
-          <button className="botao-senha" onClick={() => nav("/login")}>
+        <div className="botao-login">
+          <button className="botao-login" onClick={() => nav("/login")}>
             Fazer Login
           </button>
         </div>

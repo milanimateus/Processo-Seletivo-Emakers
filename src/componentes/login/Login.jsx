@@ -1,7 +1,7 @@
 import React, { useState } from "react"; 
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; 
+import EastIcon from '@mui/icons-material/East'
 import imagemForm from "../../images/imagemForm.png"; 
 
 const Login = () => {
@@ -34,8 +34,6 @@ const Login = () => {
     const user = usuarios.find((u) => u.email === loginData.email);
 
     if (user && user.password === loginData.password) {
-      alert("Login bem-sucedido!");
-
       // Salva o usuário na sessão para uso em outras partes da aplicação
       sessionStorage.setItem("loggedInUser", JSON.stringify(user));
 
@@ -73,9 +71,9 @@ const Login = () => {
 
           {error && <p className="error-message">{error}</p>}
 
-          <div className="botao-login">
+          <div className="botao">
             <button type="submit" className="seta">
-              <ArrowForwardIcon />
+              <EastIcon/>
             </button>
           </div>
         </form>

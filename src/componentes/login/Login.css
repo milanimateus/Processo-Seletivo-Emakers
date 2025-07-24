@@ -1,0 +1,41 @@
+.title-login {
+  display: flex;
+  justify-content: center;
+  color: #4b626c;
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.botao-registro {
+  position: fixed;
+  padding-bottom: 35px;
+  bottom: 20px;
+  left: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #4b626c;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.botao-senha {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #4b626c;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.botao-senha :hover {
+  color: #97a4a2;
+  cursor: pointer;
+}
+.botao-registro :hover {
+  color: #97a4a2;
+  cursor: pointer;
+}

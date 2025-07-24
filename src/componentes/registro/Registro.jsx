@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import imagemForm from "../../images/imagemForm.png";
 import "./Registro.css";
+import EastIcon from '@mui/icons-material/East'
 
 const Registro = () => {
   const [userData, setUserData] = useState({
@@ -139,7 +140,7 @@ const Registro = () => {
           </div>
           <div className="botao-registo">
             <button type="submit" className="seta">
-              <ArrowForwardIcon />
+              <EastIcon/>
             </button>
           </div>
         </form>

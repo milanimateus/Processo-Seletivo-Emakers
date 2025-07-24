@@ -3,4 +3,8 @@
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: #FBF8F4;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
