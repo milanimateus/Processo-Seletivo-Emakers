@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.navbar {
+  background-color: #fbf6f0;
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  padding: 0 30px;
+  height: 80px; /* Altura consistente */
+  box-sizing: border-box;
+
+  box-shadow: 0 1px 10px #4b626c;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.botao-navbar {
+  display: flex;
+}
+
+.botao {
+  text-decoration: none;
+  border: none;
+  font-size: 24px;
+  background-color: transparent;
+  color: #4b626c;
+}
+
+.botao:hover {
+  cursor: pointer;
+  color: #2D444E;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+}
+
+.barra-pesquisa input {
+  background-color: #97a4a273;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #4b626c;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0px 5px 10px 0.1px rgba(0, 0, 0, 0.25);
+}
+
+.barra-pesquisa input:focus {
+  border-color: #4b626c;
+}
+
+.icone-lupa {
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  left: -15%;
+  transition: color 0.3s ease;
+  top: 0.15rem;
+}
+
+.icone-lupa:hover {
+  color: #4b626c;
+}

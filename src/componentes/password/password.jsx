@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import EastIcon from "@mui/icons-material/East";
 import imagemForm from "../../images/imagemForm.png";
 import "./Password.css";
 
@@ -57,7 +57,7 @@ const Password = () => {
           {error && <p className="error-message">{error}</p>}
           <div className="botao-recover">
             <button type="submit" className="seta">
-              <ArrowForwardIcon />
+              <EastIcon fontSize="inherit" />
             </button>
           </div>
         </form>

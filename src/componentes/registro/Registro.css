@@ -46,11 +46,11 @@
   text-decoration: none;
   background-color: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .seta :hover {
-  color: #97a4a2; 
+  color: #97a4a2;
   cursor: pointer;
 }
 

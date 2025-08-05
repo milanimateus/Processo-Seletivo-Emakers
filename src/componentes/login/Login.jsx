@@ -73,7 +73,7 @@ const Login = () => {
 
           <div className="botao">
             <button type="submit" className="seta">
-              <EastIcon/>
+              <EastIcon fontSize="inherit"/>
             </button>
           </div>
         </form>
