@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+footer {
+  
+  background-color: #97a4a2;
+  font-family: "Montserrat", sans-serif;
+  color: #fbf8f3; 
+
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box; 
+}
+
+.informacoes {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.feito-por {
+  color: #4b626c;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.game-Dame {
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+.game-Dame img {
+  width: 160px;
+}
+
+.game-Dame h2,
+.explorar h2,
+.contato h2 {
+  font-weight: 500;
+  font-size: 28px; 
+  margin-bottom: 10px;
+}
+
+.game-Dame p {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.botao-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.botao-f {
+  background: none;
+  border: none;
+  color: #fbf8f3;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 200;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.botao-f:hover {
+  color: #d1ccc4;
+}
+
+.contato p,
+.contato a {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fbf8f3;
+}

@@ -9,14 +9,8 @@
   justify-content: space-between;
   align-items: center;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
   padding: 0 30px;
-  height: 80px; /* Altura consistente */
+  height: 80px;
   box-sizing: border-box;
 
   box-shadow: 0 1px 10px #4b626c;
@@ -40,7 +34,7 @@
 
 .botao:hover {
   cursor: pointer;
-  color: #2D444E;
+  color: #2d444e;
 }
 
 .barra-pesquisa {
