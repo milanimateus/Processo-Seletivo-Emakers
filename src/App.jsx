@@ -5,6 +5,7 @@ import Registro from "./componentes/registro/Registro.jsx";
 import Login from "./componentes/login/Login.jsx";
 import Password from "./componentes/password/Password.jsx";
 import Home from "./componentes/home/Home.jsx";
+import Conta from "./componentes/conta/Conta.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/registro" element={<Registro />} />
         <Route path="/password" element={<Password />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/conta" element={<Conta />} />
       </Routes>
     </BrowserRouter>
   );
