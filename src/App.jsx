@@ -6,6 +6,7 @@ import Login from "./componentes/login/Login.jsx";
 import Password from "./componentes/password/Password.jsx";
 import Home from "./componentes/home/Home.jsx";
 import Conta from "./componentes/conta/Conta.jsx";
+import Populares from "./componentes/populares/Populares.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/password" element={<Password />} />
         <Route path="/home" element={<Home />} />
         <Route path="/conta" element={<Conta />} />
+        <Route path="/populares" element={<Populares />} />
       </Routes>
     </BrowserRouter>
   );

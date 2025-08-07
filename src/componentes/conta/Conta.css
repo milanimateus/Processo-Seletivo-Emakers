@@ -8,7 +8,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .container-conta {
@@ -16,6 +15,7 @@ body {
   height: 100vh;
   display: flex;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .info-conta {
@@ -75,12 +75,12 @@ body {
 }
 
 .botao-conta--admin button {
-  background-color: #a3acae; 
+  background-color: #a3acae;
   border: 2px solid #fbf6f0;
 }
 
 .botao-conta--admin button:hover {
-  background-color: #8d979a; 
+  background-color: #8d979a;
   transform: translateY(-3px) scale(1.02);
 }
 

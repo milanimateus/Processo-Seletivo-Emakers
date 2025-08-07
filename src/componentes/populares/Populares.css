@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.populares-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #4B626C;
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+
+.descricao-jogo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 60px;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.imagem-populares {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-populares img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.texto-populares {
+  flex: 1.5;
+}
+
+.texto-populares h2 {
+  color: #4B626C;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.texto-populares p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4B626C;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+footer {
+  width: 100%;
+}
