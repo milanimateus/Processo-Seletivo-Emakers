@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* Adicionar overflow: hidden ao body é uma garantia extra */
+  overflow: hidden; 
+}
+
+.admin-main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh; /* FIXO: Garante que o container não passe da altura da tela */
+}
+
+.cadastro-jogo,
+.remover-jogo,
+.editar-jogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem; /* Espaçamento principal entre os blocos de conteúdo */
+  flex: 1;
+  overflow-y: auto; /* ADICIONADO: A rolagem acontece aqui dentro, se precisar */
+}
+
+.cadastro-jogo,
+.editar-jogo {
+  background-color: #4b626c;
+}
+
+.remover-jogo {
+  background-color: #ffffff;
+}
+
+.cadastro-jogo h1,
+.editar-jogo h1 {
+  /* margin-top: 20px; REMOVIDO */
+  font-size: 32px;
+  font-weight: 600;
+  color: #fbf6f0;
+  text-align: center;
+}
+
+.remover-jogo h1 {
+  /* margin-top: 20px; REMOVIDO */
+  font-size: 32px;
+  font-weight: 600;
+  color: #4b626c;
+  text-align: center;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.titulo-admin input,
+.genero-admin input,
+.descricao-admin textarea {
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.descricao-admin textarea {
+  /* margin-top: 20px; REMOVIDO */
+  height: 120px;
+  resize: none;
+  text-align: center;
+  justify-content: center;
+}
+
+.cadastro-jogo input::placeholder,
+.editar-jogo input::placeholder,
+.cadastro-jogo textarea::placeholder,
+.editar-jogo textarea::placeholder {
+  color: #4b626c;
+}
+
+.remover-jogo .titulo-admin input {
+  background-color: #4b626c;
+  color: #ffffff;
+}
+
+.remover-jogo .titulo-admin input::placeholder {
+  color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 20px;
+}
+
+.imagem-admin .file-upload-label {
+  font-size: 20px;
+  display: inline-block;
+  width: 220px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #efefef;
+  border: 1px solid #ccc;
+  color: #4b626c;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.imagem-admin .file-upload-label:hover {
+  background-color: #dcdcdc;
+}
+
+.imagem-admin input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.botao-claro,
+.botao-escuro {
+  /* margin-top: 20px; REMOVIDO */
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.botao-claro {
+  background-color: #fbf6f0;
+  color: #4b626c;
+}
+
+.botao-escuro {
+  background-color: #4b626c;
+  color: #ffffff;
+}
+
+.botao-claro:hover,
+.botao-escuro:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
