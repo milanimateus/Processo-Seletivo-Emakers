@@ -3,28 +3,36 @@
 .navbar {
   background-color: #fbf6f0;
   font-family: "Montserrat", sans-serif;
-
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* ALTERAÇÃO 1: Removido 'space-between' para dar controle aos filhos */
+  /* justify-content: space-between; */
   align-items: center;
-
   padding: 0 30px;
   height: 80px;
   box-sizing: border-box;
-
   box-shadow: 0 1px 10px #4b626c;
 }
 
-.logo img {
+.navbar__logo img {
   width: 80px;
+  display: block;
 }
 
-.botao-navbar {
+.navbar__nav {
   display: flex;
+  align-items: center;
+  /* gap: 20px; -> O 'space-around' cuidará do espaçamento */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* ALTERAÇÃO 2: Faz a lista crescer e distribui os links dentro dela */
+  flex-grow: 1;
+  justify-content: space-around; /* Pode usar 'space-evenly' ou 'center' com 'gap' também */
 }
 
-.botao {
+.navbar__nav-link {
   text-decoration: none;
   border: none;
   font-size: 24px;
@@ -32,33 +40,32 @@
   color: #4b626c;
 }
 
-.botao:hover {
+.navbar__nav-link:hover {
   cursor: pointer;
   color: #2d444e;
 }
 
-.barra-pesquisa {
+.navbar__search {
   display: flex;
   align-items: center;
 }
 
-.barra-pesquisa input {
+.navbar__search-input {
   background-color: #97a4a273;
   border: none;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 16px;
   color: #4b626c;
   padding: 10px;
-  font-size: 16px;
   outline: none;
   box-shadow: 0px 5px 10px 0.1px rgba(0, 0, 0, 0.25);
 }
 
-.barra-pesquisa input:focus {
+.navbar__search-input:focus {
   border-color: #4b626c;
 }
 
-.icone-lupa {
+.navbar__search-button {
   background: none;
   border: none;
   color: #000000;
@@ -70,6 +77,50 @@
   top: 0.15rem;
 }
 
-.icone-lupa:hover {
+.navbar__search-button:hover {
   color: #4b626c;
+}
+
+.navbar__toggle {
+  display: none;
+}
+
+
+/* =================================================================== */
+/* Bloco para Responsividade e Menu Sanduíche (NENHUMA ALTERAÇÃO AQUI)  */
+/* =================================================================== */
+
+@media (max-width: 992px) {
+  .navbar__nav,
+  .navbar__search {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: block;
+    font-size: 2.2rem;
+    color: #4b626c;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    /* No mobile, voltamos ao space-between para alinhar logo e ícone */
+    justify-content: space-between;
+  }
+
+  .navbar__nav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #fbf6f0;
+    /* Resetamos as propriedades de crescimento no menu mobile */
+    flex-grow: 0;
+  }
 }
