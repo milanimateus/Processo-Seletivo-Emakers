@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import imagemForm from "../../images/imagemForm.png";
-import "./Registro.css";
+import "./AuthForm.css"; 
 import EastIcon from "@mui/icons-material/East";
 
 const Registro = () => {
@@ -14,7 +14,6 @@ const Registro = () => {
   });
 
   const [errors, setErrors] = useState({});
-
   const nav = useNavigate();
 
   const validate = (data) => {
@@ -75,12 +74,12 @@ const Registro = () => {
   };
 
   return (
-    <div className="container">
-      <div className="container-form">
-        <form onSubmit={handleSubmit} className="form-registro">
-          <div className="title-registro">Registrar</div>
-          <div className="inputs">
-            <div className="input-block">
+    <div className="auth-page-container">
+      <div className="auth-panel">
+        <form onSubmit={handleSubmit} className="auth-form">
+          <div className="auth-form__title">Registrar</div>
+          <div className="auth-form__fields">
+            <div className="auth-form__group">
               <input
                 type="text"
                 name="username"
@@ -92,7 +91,7 @@ const Registro = () => {
                 <p className="error-message">{errors.username}</p>
               )}
             </div>
-            <div className="input-block">
+            <div className="auth-form__group">
               <input
                 type="email"
                 name="email"
@@ -102,7 +101,7 @@ const Registro = () => {
               />
               {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
-            <div className="input-block">
+            <div className="auth-form__group">
               <input
                 type="text"
                 name="cpf"
@@ -112,7 +111,7 @@ const Registro = () => {
               />
               {errors.cpf && <p className="error-message">{errors.cpf}</p>}
             </div>
-            <div className="input-block">
+            <div className="auth-form__group">
               <input
                 type="password"
                 name="password"
@@ -124,7 +123,7 @@ const Registro = () => {
                 <p className="error-message">{errors.password}</p>
               )}
             </div>
-            <div className="input-block">
+            <div className="auth-form__group">
               <input
                 type="password"
                 name="confirmPassword"
@@ -137,19 +136,19 @@ const Registro = () => {
               )}
             </div>
           </div>
-          <div className="botao-registo">
-            <button type="submit" className="seta">
+          <div className="auth-form__actions">
+            <button type="submit" className="auth-form__submit">
               <EastIcon fontSize="inherit" />
             </button>
           </div>
         </form>
-        <div className="botao-login">
-          <button className="botao-login" onClick={() => nav("/login")}>
+        <div className="auth-panel__footer">
+          <button className="footer-link" onClick={() => nav("/login")}>
             Fazer Login
           </button>
         </div>
       </div>
-      <div className="imagem">
+      <div className="auth-page__aside">
         <img src={imagemForm} alt="Imagem Jogo" />
       </div>
     </div>

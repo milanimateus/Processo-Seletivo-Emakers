@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+html, body {
+  overflow-y: auto; 
+  height: auto;     
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +23,10 @@ body {
 }
 
 .main-content {
-  flex-grow: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 80px; 
 }
 
 .main-content h1 {

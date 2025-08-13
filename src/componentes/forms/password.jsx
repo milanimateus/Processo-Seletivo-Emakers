@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
 import imagemForm from "../../images/imagemForm.png";
-import "./Password.css";
+import "./AuthForm.css";
 
 const Password = () => {
   const [emailData, setEmailData] = useState({ email: "" });
@@ -38,12 +38,17 @@ const Password = () => {
   };
 
   return (
-    <div className="container">
-      <div className="container-form">
-        <form onSubmit={handleRecover} className="form-login">
-          <div className="title-recover">Recuperar <br />Conta</div>
-          <div className="inputs">
-            <div className="input-block">
+    <div className="auth-page-container">
+      <div className="auth-panel">
+        <form onSubmit={handleRecover} className="auth-form">
+          <div className="auth-form__title">
+            <div className="title-stack">
+              <span>Recuperar</span>
+              <span className="indented-line">Conta</span>
+            </div>
+          </div>
+          <div className="auth-form__fields">
+            <div className="auth-form__group">
               <input
                 type="email"
                 name="email"
@@ -55,24 +60,23 @@ const Password = () => {
             </div>
           </div>
           {error && <p className="error-message">{error}</p>}
-          <div className="botao-recover">
-            <button type="submit" className="seta">
+          <div className="auth-form__actions">
+            <button type="submit" className="auth-form__submit">
               <EastIcon fontSize="inherit" />
             </button>
           </div>
         </form>
-        <div className="botao-registro">
-          <button className="botao-registro" onClick={() => nav("/registro")}>
+
+        <div className="auth-panel__footer">
+          <button className="footer-link" onClick={() => nav("/registro")}>
             Criar Conta
           </button>
-        </div>
-        <div className="botao-login">
-          <button className="botao-login" onClick={() => nav("/login")}>
+          <button className="footer-link" onClick={() => nav("/login")}>
             Fazer Login
           </button>
         </div>
       </div>
-      <div className="imagem">
+      <div className="auth-page__aside">
         <img src={imagemForm} alt="Imagem Jogo" />
       </div>
     </div>

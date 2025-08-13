@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-lancamentos {
+  margin: 0;
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #4b626c;
+  position: relative;
+}
+
+.title-lancamentos h1 {
+  color: #fbf8f3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.imagens-lancamentos {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.imagens-lancamentos img {
+  width: 250px;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.preco-lancamentos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fcfafa;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.preco-lancamentos p {
+  color: #4b626c;
+  font-weight: 600;
+}
+.slick-slide > div {
+  margin: 0 15px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 0px;
+}
+.slick-next {
+  right: 0px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: "slick";
+  font-size: 40px;
+  color: #fbf8f3;
+
+  opacity: 0.6;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slick-prev:hover::before,
+.slick-next:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}

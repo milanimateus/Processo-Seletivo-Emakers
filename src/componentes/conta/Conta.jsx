@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Importe o useNavigate
+import { useNavigate } from "react-router-dom"; 
 import Navbar from "../navbar/Navbar";
 import "./Conta.css";
 import BobEsponja from "../../images/BobEsponja.png";
@@ -54,7 +54,7 @@ const Conta = () => {
   }
 
   return (
-    <>
+    <div className="page-conta-wrapper">
       <Navbar />
       <div className="container-conta">
         <div className="info-conta">
@@ -104,7 +104,7 @@ const Conta = () => {
           </div>
         </div>
       </div>
-    </>
+     </div>
   );
 };
 

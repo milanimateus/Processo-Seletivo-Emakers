@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Registro from "./componentes/registro/Registro.jsx";
-import Login from "./componentes/login/Login.jsx";
-import Password from "./componentes/password/Password.jsx";
+import Registro from "./componentes/forms/Registro.jsx";
+import Login from "./componentes/forms/Login.jsx";
+import Password from "./componentes/forms/Password.jsx";
 import Home from "./componentes/home/Home.jsx";
 import Conta from "./componentes/conta/Conta.jsx";
 import Populares from "./componentes/populares/Populares.jsx";

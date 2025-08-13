@@ -1,8 +1,8 @@
-import React, { useState } from "react"; 
-import "./Login.css";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import EastIcon from '@mui/icons-material/East'
-import imagemForm from "../../images/imagemForm.png"; 
+import EastIcon from "@mui/icons-material/East";
+import imagemForm from "../../images/imagemForm.png";
+import "./AuthForm.css";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -30,13 +30,10 @@ const Login = () => {
     }
 
     const usuarios = JSON.parse(usuariosArmazenados);
-
     const user = usuarios.find((u) => u.email === loginData.email);
 
     if (user && user.password === loginData.password) {
-      // Salva o usuário na sessão para uso em outras partes da aplicação
       sessionStorage.setItem("loggedInUser", JSON.stringify(user));
-
       nav("/home");
     } else {
       setError("E-mail ou senha inválidos.");
@@ -44,12 +41,12 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <div className="container-form">
-        <form onSubmit={handleLogin} className="form-login">
-          <div className="title-login">Login</div>
-          <div className="inputs">
-            <div className="input-block">
+    <div className="auth-page-container">
+      <div className="auth-panel">
+        <form onSubmit={handleLogin} className="auth-form">
+          <div className="auth-form__title">Login</div>
+          <div className="auth-form__fields">
+            <div className="auth-form__group">
               <input
                 type="email"
                 name="email"
@@ -58,7 +55,7 @@ const Login = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="input-block">
+            <div className="auth-form__group">
               <input
                 type="password"
                 name="password"
@@ -71,24 +68,24 @@ const Login = () => {
 
           {error && <p className="error-message">{error}</p>}
 
-          <div className="botao">
-            <button type="submit" className="seta">
-              <EastIcon fontSize="inherit"/>
+          <div className="auth-form__actions">
+            <button type="submit" className="auth-form__submit">
+              <EastIcon fontSize="inherit" />
             </button>
           </div>
         </form>
-        <div className="botao-registro">
-          <button className="botao-registro" onClick={() => nav("/registro")}>
+
+        <div className="auth-panel__footer">
+          <button className="footer-link" onClick={() => nav("/registro")}>
             Criar Conta
           </button>
-        </div>
-        <div className="botao-senha">
-          <button className="botao-senha" onClick={() => nav("/password")}>
+          <button className="footer-link" onClick={() => nav("/password")}>
             Esqueceu a senha?
           </button>
         </div>
       </div>
-      <div className="imagem">
+
+      <div className="auth-page__aside">
         <img src={imagemForm} alt="Imagem Jogo" />
       </div>
     </div>
