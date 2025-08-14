@@ -11,7 +11,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Lancamentos.css";
 
-
 const Lancamentos = () => {
   var settings = {
     dots: true,
@@ -23,25 +22,25 @@ const Lancamentos = () => {
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 1280, 
+        breakpoint: 1280,
         settings: {
           slidesToShow: 4,
         },
       },
       {
-        breakpoint: 1024, 
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480, 
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
         },
@@ -84,7 +83,7 @@ const Lancamentos = () => {
 
   return (
     <div className="container-lancamentos">
-      <div className="title-lancamentos">
+      <div className="titulo-lancamento">
         <h1>Lançamentos</h1>
       </div>
       <div className="slider-lancamentos">

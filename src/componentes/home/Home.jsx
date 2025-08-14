@@ -10,6 +10,7 @@ const Home = () => {
     <div className="app-container">
       <Navbar />
       <main className="main-content">
+        <Destaques/>
         <Lancamentos/>
       </main>
       <Footer />

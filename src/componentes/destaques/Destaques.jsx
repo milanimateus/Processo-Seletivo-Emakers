@@ -1,65 +1,96 @@
 import React from "react";
 import Slider from "react-slick";
-
-// É crucial importar os estilos CSS do react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import "./Destaques.css"; // Nosso arquivo de estilos customizado
-
-// Importando as imagens
+import "./Destaques.css";
 import GodOfWar from "../../images/popularesGOD.png";
 import Horizon from "../../images/popularesHorizon.png";
 import DaysGone from "../../images/popularesDaysGone.png";
 
+const SlideItem = ({ data }) => {
+  return (
+    <div>
+      <div className="slide-content">
+        <div className="coluna-imagens-pequenas">
+          {data.imagensPequenas.map((img, index) => (
+            <img
+              key={index}
+              src={img.src}
+              alt={img.alt}
+              className="imagem-pequena"
+            />
+          ))}
+        </div>
+        <div className="coluna-imagem-grande">
+          <img
+            src={data.imagemGrande.src}
+            alt={data.imagemGrande.alt}
+            className="imagem-grande"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Destaques = () => {
-  // Configurações simplificadas para o slider
   const settings = {
-    dots: true,       // Mostra os pontos de navegação
-    infinite: true,   // Loop infinito
-    speed: 500,       // Velocidade da transição em ms
-    slidesToShow: 1,  // Mostrar 1 slide de cada vez
-    slidesToScroll: 1,// Passar 1 slide de cada vez
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
   };
 
-  // Array com os dados de cada slide
-  const destaques = [
+  const destaquesData = [
     {
-      imagemPequena1: DaysGone,
-      imagemPequena2: Horizon,
-      imagemGrande: GodOfWar,
+      id: 1,
+      imagemGrande: {
+        src: GodOfWar,
+        alt: "Arte principal de God of War com Kratos e Atreus",
+      },
+      imagensPequenas: [
+        { src: DaysGone, alt: "Protagonista de Days Gone ao lado de sua moto" },
+        {
+          src: Horizon,
+          alt: "Aloy, de Horizon Zero Dawn, mirando com seu arco",
+        },
+      ],
     },
     {
-      imagemPequena1: GodOfWar,
-      imagemPequena2: DaysGone,
-      imagemGrande: Horizon,
+      id: 2,
+      imagemGrande: {
+        src: Horizon,
+        alt: "Aloy, de Horizon Zero Dawn, em uma paisagem com máquinas",
+      },
+      imagensPequenas: [
+        { src: GodOfWar, alt: "Kratos, de God of War, em batalha" },
+        { src: DaysGone, alt: "Cena de ação do jogo Days Gone" },
+      ],
     },
     {
-      imagemPequena1: Horizon,
-      imagemPequena2: GodOfWar,
-      imagemGrande: DaysGone,
+      id: 3,
+      imagemGrande: {
+        src: DaysGone,
+        alt: "Protagonista de Days Gone em um cenário pós-apocalíptico",
+      },
+      imagensPequenas: [
+        {
+          src: Horizon,
+          alt: "Uma das máquinas colossais de Horizon Zero Dawn",
+        },
+        { src: GodOfWar, alt: "Close-up no rosto de Kratos em God of War" },
+      ],
     },
   ];
 
   return (
-    // Corrigido: o atributo deve ser 'className'
     <div className="container-destaques">
       <Slider {...settings}>
-        {destaques.map((destaque, index) => (
-          // Cada filho direto do Slider é um slide
-          <div key={index}>
-            <div className="slide-content">
-              <div className="coluna-imagens-pequenas">
-                <img src={destaque.imagemPequena1} alt="Destaque menor 1" className="imagem-pequena" />
-                <img src={destaque.imagemPequena2} alt="Destaque menor 2" className="imagem-pequena" />
-              </div>
-              <div className="coluna-imagem-grande">
-                <img src={destaque.imagemGrande} alt="Destaque principal" className="imagem-grande" />
-              </div>
-            </div>
-          </div>
+        {destaquesData.map((destaque) => (
+          <SlideItem key={destaque.id} data={destaque} />
         ))}
       </Slider>
     </div>

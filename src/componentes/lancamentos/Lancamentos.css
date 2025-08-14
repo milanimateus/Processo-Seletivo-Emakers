@@ -8,14 +8,14 @@ body {
   margin: 0;
   max-width: 100%;
   padding-top: 0;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
   background-color: #4b626c;
   position: relative;
 }
 
-.title-lancamentos h1 {
+.container-lancamentos .titulo-lancamento h1 {
   color: #fbf8f3;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -62,35 +62,34 @@ body {
   color: #4b626c;
   font-weight: 600;
 }
-.slick-slide > div {
+
+.container-lancamentos .slick-slide > div {
   margin: 0 15px;
 }
 
-.slick-prev,
-.slick-next {
+.container-lancamentos .slick-prev,
+.container-lancamentos .slick-next {
   z-index: 1;
 }
 
-.slick-prev {
+.container-lancamentos .slick-prev {
   left: 0px;
 }
-.slick-next {
+.container-lancamentos .slick-next {
   right: 0px;
 }
 
-.slick-prev::before,
-.slick-next::before {
+.container-lancamentos .slick-prev::before,
+.container-lancamentos .slick-next::before {
   font-family: "slick";
   font-size: 40px;
   color: #fbf8f3;
-
   opacity: 0.6;
-
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.slick-prev:hover::before,
-.slick-next:hover::before {
+.container-lancamentos .slick-prev:hover::before,
+.container-lancamentos .slick-next:hover::before {
   opacity: 1;
   transform: scale(1.1);
 }

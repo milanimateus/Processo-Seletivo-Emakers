@@ -1,0 +1,84 @@
+.container-destaques {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.slide-content {
+  display: flex;
+  align-items: stretch;
+  padding: 10px;
+  height: 60vh;
+  max-height: 500px;
+}
+
+.coluna-imagens-pequenas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.coluna-imagem-grande {
+  flex: 2;
+  display: flex;
+}
+
+.imagem-pequena,
+.imagem-grande {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.coluna-imagens-pequenas .imagem-pequena {
+  flex: 1;
+  min-height: 0;
+}
+
+.container-destaques .slick-dots {
+  bottom: -30px;
+}
+
+.container-destaques .slick-dots li button:before {
+  font-size: 12px;
+  color: #4b626c;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.container-destaques .slick-dots li.slick-active button:before {
+  color: #4b626c;
+  opacity: 1;
+}
+
+.container-destaques .slick-prev,
+.container-destaques .slick-next {
+  z-index: 10;
+}
+
+.container-destaques .slick-prev {
+  left: -60px;
+}
+.container-destaques .slick-next {
+  right: -60px;
+}
+
+.container-destaques .slick-prev:before,
+.container-destaques .slick-next:before {
+  font-family: "slick";
+  font-size: 40px;
+  color: #4b626c;
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.container-destaques .slick-prev:hover:before,
+.container-destaques .slick-next:hover:before {
+  color: #2d444e;
+  opacity: 1;
+  transform: scale(1.1);
+}
