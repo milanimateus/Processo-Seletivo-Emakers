@@ -1,0 +1,304 @@
+/* ========================================= */
+/* ESTILOS GERAIS E LAYOUT PRINCIPAL         */
+/* ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.game-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #f5f5f5;
+}
+
+.carrinho-container {
+  /* Remove margens e preenchimentos padrão para controle total */
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fbf6f0;
+}
+
+/* Layout Flex principal que substitui o .cart do exemplo */
+.carrinho-layout {
+  display: flex;
+  padding-top: 80px; /* Espaço para o Navbar (ajuste se necessário) */
+}
+
+/* Coluna da Esquerda (Carrinho) - Mapeado de .escolhidos */
+.carrinho-colum {
+  flex: 2; /* Ocupa 2/3 da largura */
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem;
+  background-color: #4b626c;
+  color: #fbf6f0;
+  min-height: calc(100vh - 80px); /* Ocupa a altura da tela menos o navbar */
+}
+
+/* Coluna da Direita (Pagamento) - Mapeado de .pagamento */
+.pagamento-layout {
+  flex: 1.5; /* Ocupa 1.5/3.5 da largura - um pouco mais de espaço */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo da coluna */
+  padding: 3rem 2rem;
+  color: #4b626c;
+}
+
+/* Títulos H1 (Mapeado de legend) */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: start;
+  width: 100%; /* Garante que o texto comece à esquerda */
+  margin-bottom: 60px;
+}
+
+.pagamento-layout h1 {
+  margin-bottom: 4rem; /* Espaçamento maior no lado do pagamento */
+  text-align: center;
+}
+
+/* ========================================= */
+/* ESTILOS DOS ITENS DO CARRINHO             */
+/* ========================================= */
+
+.itens-carrinho {
+  /* display: flex;  (já estava correto) */
+  /* flex-direction: column; (já estava correto) */
+  /* align-items: center; -> Removido pois queremos que os itens ocupem 100% da largura */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%; /* Garante que o container ocupe o espaço do pai */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 2.5rem; /* <<< ADICIONADO: Espaçamento vertical entre os itens */
+}
+
+.item-carrinho {
+  width: 100%; /* <<< ADICIONADO: Força todos os itens a terem a mesma largura */
+  display: flex;
+  gap: 1.5rem; /* Espaço entre imagem e detalhes */
+}
+
+.item-carrinho img {
+  width: 250px;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  order: 2;
+}
+
+.item-detalhes {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Organiza nome/preço e botão verticalmente */
+  align-items: flex-start; /* Alinha tudo à esquerda */
+}
+
+.item-info h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.item-info p {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 2rem; /* Espaço para o preço ficar mais abaixo */
+}
+
+.item-info h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Estilizando o botão de remover para se encaixar no tema */
+.btn-remover {
+  background: #fbf6f0;
+  border: 1px solid #fbf6f0;
+  color: #4b626c;
+  font-weight: 600;
+  padding: 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-remover:hover {
+  background-color: #fbf6f0;
+  color: #4b626c;
+}
+
+/* Total do Carrinho (Mapeado de .total) */
+.resumo-carrinho {
+  width: 60%;
+  align-self: center;
+  margin-top: auto; /* Empurra o total para o final da coluna */
+  padding-top: 2rem;
+  border-top: 2px solid #fbf6f0;
+}
+
+.total-preco {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* ========================================= */
+/* ESTILOS DA SEÇÃO DE PAGAMENTO             */
+/* ========================================= */
+
+.formas-pagamento {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.opcao-pagamento {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.opcao-pagamento img {
+  width: 40px;
+}
+
+/* Termos e Condições */
+.termos-condicoes {
+  width: 100%;
+  font-size: 20px;
+  color: #4b626c;
+  font-weight: 500;
+  border-top: 2px solid #4b626c;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botão Finalizar */
+.btn-finalizar {
+  background-color: #4b626c;
+  border: 2px solid #4b626c;
+  color: #fbf6f0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  transition: opacity 0.4s;
+  cursor: pointer;
+  margin-top: 3rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-finalizar:hover {
+  opacity: 0.75;
+}
+
+/* ========================================= */
+/* INPUTS CUSTOMIZADOS (RADIO E CHECKBOX)    */
+/* ========================================= */
+
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none; /* Remove o estilo padrão */
+  -webkit-appearance: none;
+  border: 2px solid #4b626c;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+}
+
+input[type="radio"] {
+  border-radius: 50%; /* Círculo para radio */
+}
+input[type="checkbox"] {
+  border-radius: 4px; /* Quadrado para checkbox */
+}
+
+/* Bolinha/check interno */
+input[type="radio"]::before,
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="radio"]::before {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+input[type="checkbox"]::before {
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  left: 3px;
+  background-color: #4b626c;
+  transform: scale(0); /* Começa invisível */
+}
+
+/* Estilo quando selecionado */
+input[type="radio"]:checked::before {
+  background-color: #4b626c;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1); /* Fica visível */
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE                            */
+/* ========================================= */
+
+@media (max-width: 1100px) {
+  .carrinho-layout {
+    flex-direction: column; /* Coloca as colunas uma sobre a outra */
+    padding-top: 80px;
+  }
+
+  .carrinho-colum {
+    min-height: auto; /* Remove a altura mínima */
+    padding: 2rem;
+  }
+
+  .pagamento-layout {
+    align-items: stretch; /* Alinha o conteúdo à largura total */
+    padding: 2rem;
+  }
+
+  .item-info p {
+    font-size: 1.5rem; /* Diminui um pouco o preço */
+    margin-top: 1rem;
+  }
+
+  .total-preco {
+    font-size: 1.5rem;
+  }
+}

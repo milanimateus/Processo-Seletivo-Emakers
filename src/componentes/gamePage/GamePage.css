@@ -136,7 +136,7 @@ body {
   transform: translateY(-3px);
 }
 
-.carrinho-container-externo {
+.game-page-container .carrinho-container-externo {
   max-width: 1600px;
   width: 90%;
   margin: 0px auto 40px auto;
@@ -144,7 +144,7 @@ body {
   justify-content: flex-end;
 }
 
-.carrinho-compra {
+.game-page-container .carrinho-compra {
   position: static;
   width: 60px;
   height: 60px;
@@ -160,7 +160,7 @@ body {
   transition: transform 0.2s ease;
 }
 
-.carrinho-compra:hover {
+.game-page-container .carrinho-compra:hover {
   transform: scale(1.1);
 }
 

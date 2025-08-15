@@ -10,23 +10,26 @@ import Populares from "./componentes/populares/Populares.jsx";
 import Admin from "./componentes/admin/Admin.jsx";
 import GamePage from "./componentes/gamePage/GamePage.jsx";
 import Carrinho from "./componentes/carrinho/Carrinho.jsx";
+import { CartProvider } from "./componentes/context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/password" element={<Password />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/conta" element={<Conta />} />
-        <Route path="/populares" element={<Populares />} />
-        <Route path="/admin" element={<Admin/>}/>
-        <Route path="/gamepage" element={<GamePage/>}/>
-        <Route path="/carrinho" element={<Carrinho />} /> 
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/password" element={<Password />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/conta" element={<Conta />} />
+          <Route path="/populares" element={<Populares />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/gamepage" element={<GamePage />} />
+          <Route path="/carrinho" element={<Carrinho />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
