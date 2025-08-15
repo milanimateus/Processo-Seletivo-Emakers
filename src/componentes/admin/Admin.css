@@ -8,8 +8,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* Adicionar overflow: hidden ao body é uma garantia extra */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .admin-main-content {
@@ -17,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100vh; /* FIXO: Garante que o container não passe da altura da tela */
+  height: 100vh;
 }
 
 .cadastro-jogo,
@@ -27,9 +26,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  gap: 2rem; /* Espaçamento principal entre os blocos de conteúdo */
+  gap: 0.2rem; 
   flex: 1;
-  overflow-y: auto; /* ADICIONADO: A rolagem acontece aqui dentro, se precisar */
+  overflow-y: auto;
 }
 
 .cadastro-jogo,
@@ -43,7 +42,6 @@ body {
 
 .cadastro-jogo h1,
 .editar-jogo h1 {
-  /* margin-top: 20px; REMOVIDO */
   font-size: 32px;
   font-weight: 600;
   color: #fbf6f0;
@@ -51,7 +49,6 @@ body {
 }
 
 .remover-jogo h1 {
-  /* margin-top: 20px; REMOVIDO */
   font-size: 32px;
   font-weight: 600;
   color: #4b626c;
@@ -81,7 +78,6 @@ body {
 }
 
 .descricao-admin textarea {
-  /* margin-top: 20px; REMOVIDO */
   height: 120px;
   resize: none;
   text-align: center;
@@ -139,7 +135,6 @@ textarea::placeholder {
 
 .botao-claro,
 .botao-escuro {
-  /* margin-top: 20px; REMOVIDO */
   width: 300px;
   padding: 10px;
   border-radius: 5px;
@@ -167,4 +162,37 @@ textarea::placeholder {
 .botao-escuro:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .admin-main-content {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    padding-top: 60px;
+  }
+
+  .cadastro-jogo,
+  .remover-jogo,
+  .editar-jogo {
+    overflow-y: visible;
+    padding: 1.5rem;
+    gap: 0rem;
+  }
+
+  .titulo-admin input,
+  .genero-admin input,
+  .descricao-admin textarea {
+    width: 100%;
+  }
+
+  .botao-claro,
+  .botao-escuro {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  body {
+    overflow: auto; 
+  }
 }

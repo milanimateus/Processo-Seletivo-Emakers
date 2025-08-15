@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 1. Importar useNavigate
+import { useNavigate } from "react-router-dom"; 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,8 +8,6 @@ import GodOfWarImg from "../../images/popularesGOD.png";
 import HorizonImg from "../../images/popularesHorizon.png";
 import DaysGoneImg from "../../images/popularesDaysGone.png";
 
-// 2. Criar uma base de dados completa para os jogos
-// Assim, cada imagem terá todos os dados associados a ela.
 const gamesData = {
   GOD_OF_WAR: {
     id: "godofwar",
@@ -40,7 +38,6 @@ const gamesData = {
   },
 };
 
-// Componente do Slide que agora recebe uma função para o clique
 const SlideItem = ({ data, onImageClick }) => {
   return (
     <div>
@@ -52,9 +49,8 @@ const SlideItem = ({ data, onImageClick }) => {
               src={game.image}
               alt={game.alt}
               className="imagem-pequena"
-              // 5. Adicionar o evento onClick, passando os dados completos do jogo
               onClick={() => onImageClick(game)}
-              style={{ cursor: "pointer" }} // Adiciona um cursor de ponteiro para indicar que é clicável
+              style={{ cursor: "pointer" }} 
             />
           ))}
         </div>
@@ -63,7 +59,6 @@ const SlideItem = ({ data, onImageClick }) => {
             src={data.imagemGrande.image}
             alt={data.imagemGrande.alt}
             className="imagem-grande"
-            // 5. Adicionar o evento onClick também na imagem grande
             onClick={() => onImageClick(data.imagemGrande)}
             style={{ cursor: "pointer" }}
           />
@@ -74,7 +69,7 @@ const SlideItem = ({ data, onImageClick }) => {
 };
 
 const Destaques = () => {
-  const navigate = useNavigate(); // 3. Inicializar o hook
+  const navigate = useNavigate(); 
 
   const settings = {
     dots: true,
@@ -86,7 +81,6 @@ const Destaques = () => {
     autoplaySpeed: 5000,
   };
   
-  // 2.1. Estrutura de dados para os slides, agora referenciando os objetos completos dos jogos
   const destaquesData = [
     {
       id: 1,
@@ -105,9 +99,8 @@ const Destaques = () => {
     },
   ];
 
-  // 3.1. Função que será chamada no clique, usando a mesma lógica do seu CarouselMain
   const handleGameClick = (game) => {
-    console.log("Navegando para a página do jogo:", game); // Ótimo para debugar
+    console.log("Navegando para a página do jogo:", game);
     navigate("/gamepage", { state: game });
   };
 
@@ -118,7 +111,6 @@ const Destaques = () => {
           <SlideItem
             key={destaque.id}
             data={destaque}
-            // 4. Passar a função de clique como prop para o SlideItem
             onImageClick={handleGameClick}
           />
         ))}

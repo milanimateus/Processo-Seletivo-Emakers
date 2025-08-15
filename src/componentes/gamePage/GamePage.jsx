@@ -5,7 +5,7 @@ import Footer from "../footer/Footer.jsx";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./GamePage.css";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
+import { Link } from "react-router-dom";
 const GamePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,7 +20,6 @@ const GamePage = () => {
 
   const handleAddToCart = () => {
     console.log(`${game.title} adicionado ao carrinho!`);
-    alert(`${game.title} foi adicionado ao carrinho!`);
   };
 
   const handleBuyNow = () => {
@@ -46,13 +45,15 @@ const GamePage = () => {
           <p className="game-description">{game.description}</p>
 
           <div className="action-buttons">
-            <button className="buy-now-btn" onClick={handleAddToCart}>
-              Adicionar ao carrinho
-              <ShoppingCartIcon
-                fontSize="small"
-                style={{ marginLeft: "8px" }}
-              />
-            </button>
+            <Link to="/carrinho" className="cart">
+              <button className="buy-now-btn" onClick={handleAddToCart}>
+                Adicionar ao carrinho
+                <ShoppingCartIcon
+                  fontSize="small"
+                  style={{ marginLeft: "8px" }}
+                />
+              </button>
+            </Link>
             <button className="add-to-cart-btn" onClick={handleAddToCart}>
               Socilitar Reembolso
               <ShoppingCartIcon
@@ -64,10 +65,11 @@ const GamePage = () => {
         </div>
       </main>
       <div className="carrinho-container-externo">
-        <div className="carrinho-compra">
+        <Link to="/carrinho" className="carrinho-compra">
           <ShoppingCartOutlinedIcon fontSize="inherit" />
-        </div>
+        </Link>
       </div>
+
       <Footer />
     </div>
   );

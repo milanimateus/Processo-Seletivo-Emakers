@@ -6,11 +6,10 @@ import PlaceIcon from "@mui/icons-material/Place";
 import imgNavbar from "../../images/navbar.png";
 import "./Footer.css";
 
-// As constantes podem ficar fora do componente se não dependerem de props
 const navItens = [
   { label: "Início", path: "/home" },
   { label: "Populares", path: "/populares" },
-  { label: "Conta", path: "/conta" }, // Path corrigido
+  { label: "Conta", path: "/conta" }, 
 ];
 
 const informacoesContato = {

@@ -14,51 +14,46 @@ body {
 }
 
 .carrinho-container {
-  /* Remove margens e preenchimentos padrão para controle total */
   max-width: none;
   margin: 0;
   padding: 0;
   background-color: #fbf6f0;
 }
 
-/* Layout Flex principal que substitui o .cart do exemplo */
 .carrinho-layout {
   display: flex;
-  padding-top: 80px; /* Espaço para o Navbar (ajuste se necessário) */
+  padding-top: 80px;
 }
 
-/* Coluna da Esquerda (Carrinho) - Mapeado de .escolhidos */
 .carrinho-colum {
-  flex: 2; /* Ocupa 2/3 da largura */
+  flex: 2;
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;
   background-color: #4b626c;
   color: #fbf6f0;
-  min-height: calc(100vh - 80px); /* Ocupa a altura da tela menos o navbar */
+  min-height: calc(100vh - 80px);
 }
 
-/* Coluna da Direita (Pagamento) - Mapeado de .pagamento */
 .pagamento-layout {
-  flex: 1.5; /* Ocupa 1.5/3.5 da largura - um pouco mais de espaço */
+  flex: 1.5;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo da coluna */
+  align-items: center;
   padding: 3rem 2rem;
   color: #4b626c;
 }
 
-/* Títulos H1 (Mapeado de legend) */
 h1 {
   font-size: 2.25rem;
   font-weight: 500;
   text-align: start;
-  width: 100%; /* Garante que o texto comece à esquerda */
+  width: 100%;
   margin-bottom: 60px;
 }
 
 .pagamento-layout h1 {
-  margin-bottom: 4rem; /* Espaçamento maior no lado do pagamento */
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -67,22 +62,19 @@ h1 {
 /* ========================================= */
 
 .itens-carrinho {
-  /* display: flex;  (já estava correto) */
-  /* flex-direction: column; (já estava correto) */
-  /* align-items: center; -> Removido pois queremos que os itens ocupem 100% da largura */
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 60%; /* Garante que o container ocupe o espaço do pai */
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-self: center;
-  gap: 2.5rem; /* <<< ADICIONADO: Espaçamento vertical entre os itens */
+  gap: 2.5rem;
 }
 
 .item-carrinho {
-  width: 100%; /* <<< ADICIONADO: Força todos os itens a terem a mesma largura */
+  width: 100%;
   display: flex;
-  gap: 1.5rem; /* Espaço entre imagem e detalhes */
+  gap: 1.5rem;
 }
 
 .item-carrinho img {
@@ -96,8 +88,8 @@ h1 {
 .item-detalhes {
   flex: 1;
   display: flex;
-  flex-direction: column; /* Organiza nome/preço e botão verticalmente */
-  align-items: flex-start; /* Alinha tudo à esquerda */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .item-info h2 {
@@ -110,7 +102,7 @@ h1 {
   display: flex;
   font-size: 24px;
   font-weight: 600;
-  margin-top: 2rem; /* Espaço para o preço ficar mais abaixo */
+  margin-top: 2rem;
 }
 
 .item-info h3 {
@@ -118,7 +110,6 @@ h1 {
   font-weight: 400;
 }
 
-/* Estilizando o botão de remover para se encaixar no tema */
 .btn-remover {
   background: #fbf6f0;
   border: 1px solid #fbf6f0;
@@ -136,11 +127,10 @@ h1 {
   color: #4b626c;
 }
 
-/* Total do Carrinho (Mapeado de .total) */
 .resumo-carrinho {
   width: 60%;
   align-self: center;
-  margin-top: auto; /* Empurra o total para o final da coluna */
+  margin-top: auto;
   padding-top: 2rem;
   border-top: 2px solid #fbf6f0;
 }
@@ -176,7 +166,6 @@ h1 {
   width: 40px;
 }
 
-/* Termos e Condições */
 .termos-condicoes {
   width: 100%;
   font-size: 20px;
@@ -190,7 +179,6 @@ h1 {
   gap: 1rem;
 }
 
-/* Botão Finalizar */
 .btn-finalizar {
   background-color: #4b626c;
   border: 2px solid #4b626c;
@@ -216,10 +204,9 @@ h1 {
 /* ========================================= */
 /* INPUTS CUSTOMIZADOS (RADIO E CHECKBOX)    */
 /* ========================================= */
-
 input[type="radio"],
 input[type="checkbox"] {
-  appearance: none; /* Remove o estilo padrão */
+  appearance: none;
   -webkit-appearance: none;
   border: 2px solid #4b626c;
   width: 22px;
@@ -229,15 +216,12 @@ input[type="checkbox"] {
   cursor: pointer;
   margin: 0;
 }
-
 input[type="radio"] {
-  border-radius: 50%; /* Círculo para radio */
+  border-radius: 50%;
 }
 input[type="checkbox"] {
-  border-radius: 4px; /* Quadrado para checkbox */
+  border-radius: 4px;
 }
-
-/* Bolinha/check interno */
 input[type="radio"]::before,
 input[type="checkbox"]::before {
   content: "";
@@ -246,7 +230,6 @@ input[type="checkbox"]::before {
   position: absolute;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 input[type="radio"]::before {
   width: 14px;
   height: 14px;
@@ -254,51 +237,112 @@ input[type="radio"]::before {
   top: 2px;
   left: 2px;
 }
-
 input[type="checkbox"]::before {
   width: 12px;
   height: 12px;
   top: 3px;
   left: 3px;
   background-color: #4b626c;
-  transform: scale(0); /* Começa invisível */
+  transform: scale(0);
 }
-
-/* Estilo quando selecionado */
 input[type="radio"]:checked::before {
   background-color: #4b626c;
 }
-
 input[type="checkbox"]:checked::before {
-  transform: scale(1); /* Fica visível */
+  transform: scale(1);
 }
 
 /* ========================================= */
 /* RESPONSIVIDADE                            */
 /* ========================================= */
-
 @media (max-width: 1100px) {
   .carrinho-layout {
-    flex-direction: column; /* Coloca as colunas uma sobre a outra */
+    flex-direction: column;
     padding-top: 80px;
   }
-
   .carrinho-colum {
-    min-height: auto; /* Remove a altura mínima */
+    min-height: auto;
     padding: 2rem;
   }
-
   .pagamento-layout {
-    align-items: stretch; /* Alinha o conteúdo à largura total */
+    align-items: stretch;
     padding: 2rem;
   }
-
   .item-info p {
-    font-size: 1.5rem; /* Diminui um pouco o preço */
+    font-size: 1.5rem;
     margin-top: 1rem;
   }
-
   .total-preco {
     font-size: 1.5rem;
+  }
+}
+
+/* ================================================= */
+/* RESPONSIVIDADE PARA SMARTPHONES (AJUSTE FINO)     */
+/* ================================================= */
+@media (max-width: 768px) {
+  /* 1. Ajustes no Layout Geral e Colunas */
+  .carrinho-colum,
+  .pagamento-layout {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* 2. Corrigindo o Layout de Cada Item do Carrinho */
+  .itens-carrinho {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .item-carrinho {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .item-carrinho img {
+    order: -1;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .item-detalhes {
+    width: 100%;
+    align-items: center;
+  }
+
+  .item-info {
+    text-align: center;
+  }
+
+  /* 3. Ajustando a Largura do Resumo e Total */
+  .resumo-carrinho {
+    width: 100%;
+  }
+
+  /* 4. Ajustando a Seção de Pagamento */
+  .formas-pagamento {
+    width: 100%;
+  }
+
+  .opcao-pagamento {
+    font-size: 24px;
+  }
+
+  .termos-condicoes {
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .btn-finalizar {
+    width: 100%;
+    padding: 1rem;
   }
 }

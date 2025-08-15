@@ -5,7 +5,8 @@ import Footer from "../footer/Footer";
 import GodOfWar from "../../images/popularesGOD.png";
 import Horizon from "../../images/popularesHorizon.png";
 import DaysGone from "../../images/popularesDaysGone.png";
-
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { Link } from "react-router-dom";
 const Populares = () => {
   return (
     <div className="populares-container">
@@ -16,9 +17,7 @@ const Populares = () => {
         {/* --- Jogo 1 --- */}
         <div className="descricao-jogo">
           <div className="imagem-populares">
-            <div className="classificacao-jogo">
-              1°
-            </div>
+            <div className="classificacao-jogo">1°</div>
             <img src={GodOfWar} alt="God Of War" />
           </div>
           <div className="texto-populares">
@@ -38,7 +37,7 @@ const Populares = () => {
         </div>
 
         {/* --- Jogo 2 --- */}
-        <div className="descricao-jogo">
+        <div className="descricao-jogo-invertido">
           <div className="texto-populares">
             <h2>Horizon Zero Dawn</h2>
             <p>
@@ -52,9 +51,7 @@ const Populares = () => {
             </p>
           </div>
           <div className="imagem-populares">
-            <div className="classificacao-jogo">
-              2°
-            </div>
+            <div className="classificacao-jogo">2°</div>
             <img src={Horizon} alt="Horizon" />
           </div>
         </div>
@@ -62,9 +59,7 @@ const Populares = () => {
         {/* --- Jogo 3 --- */}
         <div className="descricao-jogo">
           <div className="imagem-populares">
-            <div className="classificacao-jogo">
-              3°
-            </div>
+            <div className="classificacao-jogo">3°</div>
             <img src={DaysGone} alt="DaysGone" />
           </div>
           <div className="texto-populares">

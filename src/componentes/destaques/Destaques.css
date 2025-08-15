@@ -1,15 +1,20 @@
+/* =========================================== */
+/* ESTILOS BASE (DESKTOP FIRST)                */
+/* =========================================== */
+
 .container-destaques {
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   border-radius: 15px;
+  position: relative;
 }
 
 .slide-content {
   display: flex;
   align-items: stretch;
-  padding: 10px;
+  /* MUDANÇA 2: Removido o 'gap' para as imagens ficarem juntas */
   height: 60vh;
   max-height: 500px;
 }
@@ -18,6 +23,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  /* MUDANÇA 2: Removido o 'gap' para as imagens ficarem juntas */
 }
 
 .coluna-imagem-grande {
@@ -32,12 +38,15 @@
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  /* Removido o border-radius para um visual mais 'colado' e angular */
 }
 
 .coluna-imagens-pequenas .imagem-pequena {
   flex: 1;
   min-height: 0;
 }
+
+/* --- Estilos do Slider (Slick Carousel) --- */
 
 .container-destaques .slick-dots {
   bottom: -30px;
@@ -58,6 +67,8 @@
 .container-destaques .slick-prev,
 .container-destaques .slick-next {
   z-index: 10;
+  width: 40px;
+  height: 40px;
 }
 
 .container-destaques .slick-prev {
@@ -81,4 +92,57 @@
   color: #2d444e;
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* ============================================================= */
+/* AJUSTES PARA TELAS MENORES (TABLET E CELULAR / max-width)     */
+/* Aplicado quando a tela for 992px ou MENOR                     */
+/* ============================================================= */
+/* ============================================================= */
+/* AJUSTES PARA TELAS MENORES (TABLET E CELULAR / max-width)     */
+/* Aplicado quando a tela for 992px ou MENOR                     */
+/* ============================================================= */
+@media (max-width: 992px) {
+
+  .container-destaques {
+    /* O container principal volta a ter 100% de largura */
+    width: 100%;
+    margin: 24px 0;
+    padding: 0;
+  }
+
+  /* MUDANÇA PRINCIPAL: Reduzimos a largura do carrossel e o centralizamos */
+  .container-destaques .slick-slider {
+    width: 80%; /* O carrossel ocupa 80% da largura do container pai */
+    margin: 0 auto; /* O 'auto' nas laterais centraliza o carrossel */
+  }
+
+  .slide-content {
+    height: 40vh; 
+    max-height: 350px;
+  }
+
+  .coluna-imagens-pequenas {
+    display: none;
+  }
+  
+  .coluna-imagem-grande {
+    flex: 1;
+  }
+  
+  /* Posicionamos as setas em relação ao container de 100% */
+  .container-destaques .slick-prev {
+    /* A seta ficará a 5% da borda esquerda da tela */
+    left: 5%;
+  }
+  .container-destaques .slick-next {
+    /* A seta ficará a 5% da borda direita da tela */
+    right: 5%;
+  }
+
+  .container-destaques .slick-prev:before,
+  .container-destaques .slick-next:before {
+    font-size: 30px;
+    color: #2d444e; 
+  }
 }

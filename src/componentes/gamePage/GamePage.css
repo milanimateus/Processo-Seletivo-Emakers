@@ -1,4 +1,3 @@
-/* --- CONFIGURAÇÃO GERAL DA PÁGINA --- */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
@@ -79,6 +78,10 @@ body {
   margin-bottom: 20px;
   line-height: 1.1;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.cart{
+  text-decoration: none;
 }
 
 .game-description {
@@ -176,5 +179,49 @@ body {
 
   .game-info-column {
     flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-details-layout {
+    width: 100%;
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    border-radius: 5px;
+  }
+
+
+  .game-main-image,
+  .game-info-column {
+    box-shadow: none;
+  }
+
+  .game-info-column {
+    padding: 20px;
+  }
+
+  .game-title {
+    font-size: 26px;
+  }
+
+  .game-description {
+    font-size: 15px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  .price-details-overlay {
+    bottom: 15px;
+    right: 15px;
+    font-size: 14px;
   }
 }

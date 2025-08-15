@@ -7,7 +7,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #d1ccc4; 
+  color: #d1ccc4;
 }
 
 footer {
@@ -92,4 +92,47 @@ footer {
   margin-top: 15px;
   text-decoration: none;
   color: #fbf8f3;
+}
+
+@media (max-width: 768px) {
+  .informacoes {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; 
+  }
+
+  .feito-por{
+    margin-top: 10px;
+  }
+  .explorar {
+    display: none;
+  }
+
+  .contato h2{
+    display: none;
+  }
+
+  .game-dame,
+  .contato {
+    text-align: center; 
+    flex-basis: 250px; 
+    flex-grow: 1; 
+  }
+
+  .logo-footer img {
+    width: 100px; 
+  }
+
+  .game-dame h2,
+  .contato h2 {
+    font-size: 1.5rem; 
+  }
+
+  .game-dame p {
+    font-size: 1.1rem; 
+  }
+
+  .contato p {
+    justify-content: center; 
+  }
 }

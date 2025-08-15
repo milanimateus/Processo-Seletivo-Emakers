@@ -1,18 +1,13 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* A MÁGICA ACONTECE AQUI */
+  min-height: 100vh;
 }
 
-/* Diz ao conteúdo principal para ocupar todo o espaço extra disponível */
 .main-content {
-  flex-grow: 1; /* E AQUI */
-  /* ou flex: 1; que é um atalho */
+  flex-grow: 1;
 }
 
-/* O seu footer não precisa de nenhuma posição especial */
 footer {
-  /* ... seus estilos de cor, padding, etc ... */
-  /* NÂO precisa de position, top, bottom, left, etc. */
   width: 100%;
 }

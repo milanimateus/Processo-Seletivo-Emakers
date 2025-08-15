@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-html, body {
-  overflow-y: auto; 
-  height: auto;     
+html,
+body {
+  overflow-y: auto;
+  height: auto;
 }
 
 * {
@@ -26,14 +26,14 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 80px; 
+  padding-top: 80px;
 }
 
 .main-content h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #4B626C;
+  color: #4b626c;
   margin-top: 40px;
   margin-left: 60px;
   margin-bottom: 40px;
@@ -48,13 +48,22 @@ body {
   gap: 40px;
 }
 
+.descricao-jogo-invertido {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 60px;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
 .imagem-populares {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
-  border-radius: 8px; 
+  position: relative;
+  border-radius: 8px;
 }
 
 .imagem-populares img {
@@ -68,7 +77,7 @@ body {
 }
 
 .texto-populares h2 {
-  color: #4B626C;
+  color: #4b626c;
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -78,7 +87,7 @@ body {
 .texto-populares p {
   font-size: 18px;
   font-weight: 400;
-  color: #4B626C;
+  color: #4b626c;
   line-height: 1.6;
   text-align: justify;
 }
@@ -87,13 +96,13 @@ footer {
   width: 100%;
 }
 
-.classificacao-jogo{
+.classificacao-jogo {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
   transform: translate(-50%, -50%);
-  background-color: #4B626C; 
+  background-color: #4b626c;
   color: #fbf6f0;
   font-weight: 700;
   font-size: 22px;
@@ -103,4 +112,67 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .descricao-jogo {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 40px;
+  }
+
+  .descricao-jogo-invertido {
+    flex-direction: column-reverse;
+    gap: 25px;
+    padding: 20px 40px;
+  }
+
+  .descricao-jogo:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .main-content h1 {
+    margin-left: 40px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .texto-populares {
+    flex: 1;
+  }
+
+  .texto-populares h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding-top: 60px;
+  }
+
+  .descricao-jogo {
+    padding: 15px 20px;
+  }
+
+  .main-content h1 {
+    font-size: 28px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .texto-populares h2 {
+    font-size: 24px;
+  }
+
+  .texto-populares p {
+    font-size: 16px;
+  }
+
+  .classificacao-jogo {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    transform: translate(-40%, -40%);
+  }
 }
