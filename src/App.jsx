@@ -8,6 +8,8 @@ import Home from "./componentes/home/Home.jsx";
 import Conta from "./componentes/conta/Conta.jsx";
 import Populares from "./componentes/populares/Populares.jsx";
 import Admin from "./componentes/admin/Admin.jsx";
+import GamePage from "./componentes/gamePage/GamePage.jsx";
+import Carrinho from "./componentes/carrinho/Carrinho.jsx";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/conta" element={<Conta />} />
         <Route path="/populares" element={<Populares />} />
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="/gamepage" element={<GamePage/>}/>
+        <Route path="/carrinho" element={<Carrinho />} /> 
       </Routes>
     </BrowserRouter>
   );
