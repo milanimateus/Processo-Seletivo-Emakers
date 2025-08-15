@@ -18,7 +18,7 @@ Este projeto é um **site de vendas e exibição de jogos** desenvolvido em **Re
 ---
 
 ## 🗂 Estrutura de Pastas
-
+```
 src/
 │ App.jsx # Configuração das rotas principais
 │ main.jsx # Ponto de entrada do React
@@ -38,7 +38,7 @@ src/
 │ ├─populares/ # Carrossel de jogos populares
 │
 ├─images/ # Imagens usadas no site
-
+```
 ---
 
 ## 🔄 Navegação e Fluxo
