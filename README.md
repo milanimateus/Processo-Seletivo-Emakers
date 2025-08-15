@@ -1,7 +1,7 @@
 # 🎮 Site de Jogos - Processo Seletivo Emakers
 
 Este projeto é um **site de vendas e exibição de jogos** desenvolvido em **React** com foco em uma experiência de navegação fluida e moderna. Ele permite que o usuário explore lançamentos, destaques, jogos populares, acesse informações detalhadas sobre cada título, gerencie um carrinho de compras e faça login ou registro.
-
+Figma: https://www.figma.com/design/Y1KhuFMkpq3Ey4jpOVlibC/Design-Refer%C3%AAncia-Trilha-Front?node-id=1-90&t=6I3INXwYrzAEo3ip-0
 ---
 
 ## 📌 Funcionalidades Principais
