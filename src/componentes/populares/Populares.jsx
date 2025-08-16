@@ -5,8 +5,6 @@ import Footer from "../footer/Footer";
 import GodOfWar from "../../images/popularesGOD.png";
 import Horizon from "../../images/popularesHorizon.png";
 import DaysGone from "../../images/popularesDaysGone.png";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { Link } from "react-router-dom";
 const Populares = () => {
   return (
     <div className="populares-container">

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Link } from "react-router-dom"; // Importe o Link
+import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import BobEsponja from "../../images/bobEsponja.png";
 import Deliver from "../../images/deliver.png";

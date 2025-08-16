@@ -43,8 +43,8 @@ const Password = () => {
         <form onSubmit={handleRecover} className="auth-form">
           <div className="auth-form__title">
             <div className="title-stack">
-              <span>Recuperar</span>
-              <span className="indented-line"> Conta</span>
+              <span>Recuperar </span>
+              <span className="indented-line">Conta</span>
             </div>
           </div>
           <div className="auth-form__fields">

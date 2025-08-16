@@ -1,10 +1,7 @@
 import React from "react";
 import { useCart } from "../context/CartContext.jsx";
 import Navbar from "../navbar/Navbar.jsx";
-
-// Importando os ícones que vamos usar
 import Pix from "../../images/pix.png";
-import PaymentIcon from "@mui/icons-material/Payment";
 import "./Carrinho.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
@@ -64,7 +61,7 @@ const Carrinho = () => {
             <div className="opcao-pagamento">
               <img src={Pix} alt="Ícone Pix" className="payment-image-icon" />
               Pix
-              <input type="checkbox" id="pix" name="selecao"/>
+              <input type="checkbox" id="pix" name="selecao" />
             </div>
           </div>
           <div className="termos-condicoes">
